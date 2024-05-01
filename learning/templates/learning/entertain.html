@@ -1,0 +1,177 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+<script>
+  function openVideo(videoUrl) {
+    var modal = document.getElementById("videoModal");
+    var videoFrame = document.getElementById("videoFrame");
+    videoFrame.src = videoUrl;
+    modal.style.display = "block";
+  }
+  function closeModal() {
+    var modal = document.getElementById("videoModal");
+    modal.style.display = "none";
+    var videoFrame = modal.querySelector("iframe");
+    videoFrame.src = "";
+  }
+  function handleVideoClick(event) {
+    event.preventDefault(); // Prevent default click behavior
+    var videoUrl = this.getAttribute("src");
+    openVideo(videoUrl);
+  }
+</script>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/entertain_banner.png')"
+>
+  <div class="banner_title">
+    <h1>XEM, ĐỌC, HÁT</h1>
+    <div class="chain_link">
+      <a href="/learning">Học tập </a>
+      /
+      <a href="">Xem, đọc, hát</a>
+    </div>
+  </div>
+</div>
+<div
+  id="videoModal"
+  class="modal"
+>
+  <span
+    class="close"
+    onclick="closeModal()"
+    >&times;</span
+  >
+  <div class="modal-content">
+    <iframe
+      id="videoFrame"
+      width="560"
+      height="315"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+<section class="video_white mg-bt-200">
+  <h2 class="mg-bt-50">Hoạt hình tiếng Nhật</h2>
+  <div
+    id="carouselExample"
+    class="carousel slide"
+  >
+    <div class="carousel-inner">
+      {% for vid_item in video %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        <img
+          src="{{ vid_item.image.url }}"
+          class="d-block w-100"
+          alt="..."
+          style="cursor: pointer"
+          onclick="openVideo('{{vid_item.url}}')"
+        />
+      </div>
+      {% endfor %}
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<section class="flex_col mg-bt-200">
+  <h2 class="mg-bt-50">Truyện tranh tiếng Nhật - Truyện song ngữ</h2>
+  <div id="story-container">
+    <div class="item_story">
+      <img
+        src="{% static 'img/story1.png' %}"
+        alt=""
+      />
+      <h5>くまくんのおでかけ</h5>
+      <h5>Chuyến đi chơi của chú gấu</h5>
+    </div>
+    <div class="item_story">
+      <img
+        src="{% static 'img/story2.png' %}"
+        alt=""
+      />
+      <h5>しろ・くろ・あか</h5>
+      <h5>Trắng - Đen - Đỏ</h5>
+    </div>
+    <div class="item_story">
+      <img
+        src="{% static 'img/story3.png' %}"
+        alt=""
+      />
+      <h5>いまなんじ？</h5>
+      <h5>Bây giờ mấy giờ rồi?</h5>
+    </div>
+  </div>
+</section>
+<section class="video_white mg-bt-200">
+  <h2 class="mg-bt-50">Bài hát tiếng Nhật</h2>
+  <div
+    id="carouselSong"
+    class="carousel slide"
+  >
+    <div class="carousel-inner">
+      {% for song_item in song %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        <img
+          src="{{ song_item.image.url }}"
+          class="d-block w-100"
+          alt="..."
+          style="cursor: pointer"
+          onclick="openVideo('{{song_item.url}}')"
+        />
+      </div>
+      {% endfor %}
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselSong"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselSong"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+{% endblock %}

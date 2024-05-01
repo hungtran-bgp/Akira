@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'crossword/style.css' %}"
+/>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/crossword_banner.png')"
+>
+  <div class="banner_title">
+    <h1>
+      TRÒ CHƠI <br />
+      LUYỆN TẬP {{level}}
+    </h1>
+    <div class="chain_link">
+      <a href="/learning/level">Học tiếng nhật theo chủ đề </a>
+      /
+      <a href="">Trò chơi luyện tập {{level}}</a>
+    </div>
+  </div>
+</div>
+<section class="crossword_list">
+  {% for crossmap_item in crosslist %}
+  <a
+    class="crossword_card"
+    href="{{crossmap_item.id}}"
+  >
+    <img
+      src="{{crossmap_item.picture.url}}"
+      class="crossword_img"
+      alt=""
+    />
+    <h4>{{ crossmap_item.title }}</h4>
+  </a>
+  {% endfor %}
+</section>
+{% if crosslist.has_previous %}
+<a href="?page=1">First</a>
+<a href="?page={{ crosslist.previous_page_number }}">Previous</a>
+{% endif %} {% if crosslist.has_next %}
+<a href="?page={{ crosslist.next_page_number }}">Next</a>
+<a href="?page={{ crosslist.paginator.num_pages }}">Last</a>
+{% endif %} Page: {{ crosslist.number }}/{{ crosslist.paginator.num_pages }} {% endblock %}

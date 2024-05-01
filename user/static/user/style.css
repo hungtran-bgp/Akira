@@ -1,0 +1,80 @@
+.login_register {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.user_form,
+.register_form {
+  display: flex;
+  flex-direction: column;
+}
+.user_form {
+  justify-content: space-around;
+}
+.register_form {
+  justify-content: space-between;
+}
+.form_img {
+  width: 480px;
+  height: 660px;
+}
+.user_form h3 {
+  font-size: 32px;
+}
+.user_form,
+.register_form h4 {
+  font-size: 24px;
+}
+.input_field {
+  border-radius: 50px;
+  border: 1px solid black;
+  width: 550px;
+  height: 50px;
+  padding-left: 30px;
+  font-size: 24px;
+}
+.login_button {
+  border-radius: 50px;
+  width: 550px;
+  height: 50px;
+  color: white;
+  background-color: #234338;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.icon_line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.register_form h5 {
+  color: red;
+  font-size: 20px;
+}
+#profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+#profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+#profile-infor {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+.area_field {
+  border-radius: 50px;
+  border: 1px solid black;
+  width: 550px;
+  min-height: 100px;
+  padding-left: 30px;
+  font-size: 24px;
+}

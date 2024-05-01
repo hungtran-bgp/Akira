@@ -1,0 +1,119 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+<script>
+  function openVideo(videoUrl) {
+    var modal = document.getElementById("videoModal");
+    var videoFrame = document.getElementById("videoFrame");
+    videoFrame.src = videoUrl;
+    modal.style.display = "block";
+  }
+  function closeModal() {
+    var modal = document.getElementById("videoModal");
+    modal.style.display = "none";
+    var videoFrame = modal.querySelector("iframe");
+    videoFrame.src = "";
+  }
+  function handleVideoClick(event) {
+    event.preventDefault(); // Prevent default click behavior
+    var videoUrl = this.getAttribute("src");
+    openVideo(videoUrl);
+  }
+  // Function to close the modal
+  //   var closeBtns = document.getElementsByClassName("close");
+  //   for (var i = 0; i < closeBtns.length; i++) {
+  //     closeBtns[i].onclick = function () {
+  //       var modal = this.parentElement.parentElement;
+  //       modal.style.display = "none";
+  //       var videoFrame = modal.querySelector("iframe");
+  //       videoFrame.src = "";
+  //     };
+  //   }
+</script>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/discover_banner.png')"
+>
+  <div class="banner_title">
+    <h1>KHÁM PHÁ NHẬT BẢN</h1>
+    <div class="chain_link">
+      <a href="/learning">Học tập </a>
+      /
+      <a href="">Khám phá Nhật Bản</a>
+    </div>
+  </div>
+</div>
+<div
+  id="videoModal"
+  class="modal"
+>
+  <span
+    class="close"
+    onclick="closeModal()"
+    >&times;</span
+  >
+  <div class="modal-content">
+    <iframe
+      id="videoFrame"
+      width="560"
+      height="315"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+<div class="discover">
+  Chào mừng đến với "Du lịch ảo trải nghiệm Nhật Bản"! <br />
+  <br />
+  Bạn đang mơ ước được đặt chân đến xứ sở hoa anh đào nhưng chưa có cơ hội? Đừng lo lắng, "Du lịch ảo trải nghiệm Nhật
+  Bản" sẽ đưa bạn đến với đất nước mặt trời mọc ngay tại nhà!
+</div>
+<section>
+  <div class="video_container">
+    <h1>ĐI BỘ</h1>
+    <h3>Đi bộ để chiêm ngưỡng cảnh đẹp và âm thanh đường phố</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/UUtyQzU43qU?si=5B9VuRY38PKC_Yz-"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      onclick="handleVideoClick()"
+    ></iframe>
+  </div>
+  <div class="video_container">
+    <h1>ĐI TÀU/Ô TÔ</h1>
+    <h3>Ngồi trên tàu/ô tô và ngắm cảnh Nhật Bản</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/WjDhjGga_MU?si=VsXRi5e95UbxFcGk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="video_container">
+    <h1>ĐI XE ĐẠP</h1>
+    <h3>Đạp xe và ngắm cảnh</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/mnG1JWzAt2I?si=KIZ3akw_FgloVAb1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+{% endblock %}

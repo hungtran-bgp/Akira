@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/mylevel_banner.png')"
+>
+  <div class="banner_title">
+    <h1>HỌC TẬP - {{level}}</h1>
+    <div class="chain_link">
+      <a href="/learning/level">Học tiếng Nhật theo chủ đề </a>
+      /
+      <a href="">Cấp độ {{level}}</a>
+    </div>
+  </div>
+</div>
+<section class="note">
+  <div class="note_image"></div>
+  <div class="note_text">
+    <h1>Các bạn nhỏ hãy học tập theo thứ tự từ trên xuống dưới để làm quen lần lượt với các chủ đề nhé</h1>
+  </div>
+</section>
+
+<section id="main_block">
+  {% for lesson_item in lesson_list %} {% ifchanged lesson_item.section_title %}
+  <div class="lesson_section_title">{{ lesson_item.section_title }}</div>
+  {% endifchanged %}
+  <div class="lesson_item">
+    <h3 class="lesson_number">Bài {{lesson_item.number}}</h3>
+    <a
+      class="lesson_description"
+      href="lesson/{{lesson_item.number}}"
+    >
+      <h3>{{lesson_item.japan_name}}</h3>
+      <h3>{{lesson_item.vietnam_name}}</h3>
+      <ul>
+        <li>{{lesson_item.note1}}</li>
+        {% if lesson_item.note2 %}
+        <li>{{lesson_item.note2}}</li>
+        {% endif %}
+      </ul>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

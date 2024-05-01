@@ -1,0 +1,38 @@
+{% extends 'user/user_base.html' %} {% load static %} {% block content %}
+<section style="margin-top: 100px" id="profile">
+  <img
+    src="{{user.profile.image.url}}"
+    alt=""
+    id="profile-img"
+  />
+  <form
+    action="{% url 'user:profile' %}"
+    method="post"
+    id="profile-infor"
+  >
+    {% csrf_token %}
+    <h4>Tên người dùng</h4>
+    <input
+      type="text"
+      id="fullname"
+      name="fullname"
+      value="{{ user.profile.fullname }}"
+      required
+      class="input_field"
+      style="margin-bottom: 25px;"
+    />
+    <h4>Giới tính</h4>
+    <select id="gender" name="gender" class="input_field"style="margin-bottom:25px" required>
+        <option value="M" {% if user.profile.gender == 'M' %}selected{% endif %}>Male</option>
+        <option value="F" {% if user.profile.gender == 'F' %}selected{% endif %}>Female</option>
+        <option value="O" {% if user.profile.gender == 'O' %}selected{% endif %}>Other</option>
+      </select>
+    <h4>Tuổi</h4>
+    <input type="number" id="age" name="age" value="{{ user.profile.age }}" style="margin-bottom: 25px;" class="input_field" required>
+    <h4>Địa chỉ</h4>
+     <textarea id="location" name="location" class="area_field" style="margin-bottom: 25px;" required>{{ user.profile.location }}</textarea>
+     <button type="submit" class="button-dft" style="background-color: #B7DC99;color: black;border: none;">Lưu lại</button>
+  </form>
+</section>
+
+{% endblock %}

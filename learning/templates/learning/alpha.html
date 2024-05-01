@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/alpha_banner.png')"
+>
+  <div class="banner_title">
+    <h1>HỌC BẢNG CHỮ CÁI</h1>
+    <div class="chain_link">
+      <a href="/learning">Học tập </a>
+      /
+      <a href="">Học bảng chữ cái</a>
+    </div>
+  </div>
+</div>
+<section class="note">
+  <div class="note_image"></div>
+  <div class="note_text">
+    <p>
+      Học bảng chữ cái là bước đầu khi bạn tiếp cận với 1 ngôn ngữ mới. Trong tiếng Nhật có ba loại chữ viết
+      là Hiragana, Katakana, và Kanji (chữ Hán). Ngoài ra, Romaji chữ dùng để phiên âm tiếng Nhật sang ngôn ngữ Latinh.
+    </p>
+    <p>
+      Hiragana và Katakana là các chữ tượng âm còn chữ Hán là chữ tượng hình, vừa biểu thị âm đồng thời vừa biểu thị
+      nghĩa.
+    </p>
+    <ul>
+      <li>Hiragana: Dùng để viết những từ gốc Nhật hay viết những từ bình thường.</li>
+      <li>Katakana: Dùng để viết những từ có gốc nước ngoài (như: tiếng Anh, tiếng Việt,…) và tên người nước ngoài</li>
+      <li>Kanji: Dùng để viết các từ có gốc Hán và tên người Nhật.</li>
+      <li>Romaji: Dùng để phiên âm cho người nước ngoài có thể đọc được chữ Nhật</li>
+    </ul>
+    <p>
+      Sau đây, cùng Akira học là 2 bảng chữ cái Hiragana, Katakana còn kiểu chữ Kanji, chúng mình sẽ học theo chủ đề
+      trong từng bài học ở phần tiếp theo nha! Không để các bạn chờ lâu hơn nữa, chúng mình cùng nhau học lần lượt từ
+      bảng Hiragana đến Katakana thôi nào!
+    </p>
+  </div>
+</section>
+<section class="alpha_content">
+  <div
+    class="alpha_block"
+    style="background-color: #e7f3dd"
+  >
+    <div class="alpha_title">HIRAGANA</div>
+    <div class="alpha_symbol">あ</div>
+    <p>
+      Các bạn hãy học thuộc bảng chữ cái Hiragana trước khi học bảng chữ cái Katakana nha! Bảng chữ cái Hiragana (bảng
+      chữ mềm) bao gồm các chữ với đường nét mềm mại, uốn lượn.
+    </p>
+    <a
+      href="#"
+      class="button-dft"
+      >Bắt đầu</a
+    >
+  </div>
+  <img
+    src="{% static 'img/alpha_block.png' %}"
+    style="width: 290px; height: 290px"
+    alt=""
+  />
+  <div
+    class="alpha_block"
+    style="background-color: rgba(255, 34, 34, 0.34)"
+  >
+    <div class="alpha_title">KATAKANA</div>
+    <div class="alpha_symbol">ア</div>
+    <p>
+      Katakana là hệ thống chữ viết thứ hai mà bạn cần học sau Hiragana khi bắt đầu hành trình chinh phục tiếng Nhật.
+      Bảng chữ cái Katakana (chữ cứng) nhìn cứng cáp và thẳng tắp, với các với nét cong, nét gấp và thẳng.
+    </p>
+    <a
+      href="#"
+      class="button-dft"
+      >Bắt đầu</a
+    >
+  </div>
+</section>
+{% endblock %}

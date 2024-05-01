@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'crossword/style.css' %}"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var words = JSON.parse("{{ words|escapejs }}");
+    var check = JSON.parse("{{ check|escapejs}}");
+    // Function to create the crossword grid dynamically
+    function createGrid(words) {
+      var table = $("<table>");
+      for (var row = 0; row < words.length; row++) {
+        var tableRow = $("<tr>");
+        for (var col = 0; col < words[row].length; col++) {
+          var cell = $("<td>");
+          var letter = words[row][col]; // Access letter from submitted words
+          if (check[row]) {
+            cell.append('<input type="text" maxlength="1" class="cell correct_cell" value="' + letter + '" disabled>');
+          } else {
+            cell.append('<input type="text" maxlength="1" class="cell err_cell" value="' + letter + '" disabled>');
+          }
+          tableRow.append(cell);
+        }
+        table.append(tableRow);
+      }
+      $("#crossword").append(table);
+    }
+    function testbtn(event) {
+      alert(words);
+    }
+    createGrid(words); // Reuse the function to create the grid
+  });
+</script>
+{% endblock %} {% block content %}
+<section>
+  <div id="score">Bạn đã hoàn thành {{score}} câu hỏi</div>
+</section>
+<section class="crossmap">
+  <div id="crossword">
+    <table>
+      <tr>
+        <td class="crossword_clue">
+          {% for item in clue %}
+          <p>{{item}}</p>
+          {% endfor %}
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+<div class="center">
+  <a
+    href=""
+    class="button-dft"
+    >Quay ra</a
+  >
+  <a
+    href=""
+    class="button-dft"
+    >Làm lại</a
+  >
+</div>
+{% endblock %}

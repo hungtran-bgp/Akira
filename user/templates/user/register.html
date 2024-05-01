@@ -1,0 +1,73 @@
+{% extends 'user/user_base.html' %} {% load static %} {% block content %}
+<section class="login_register">
+  <form
+    method="post"
+    class="register_form"
+    action="{% url 'user:register' %}"
+  >
+    {% csrf_token %}
+    <h4>Đăng ký tài khoản để bắt đầu học cùng Akira nhé!</h4>
+    <div>
+      <h4>Tên đăng nhập</h4>
+      {% if username_err %}
+      <h5>{{username_err}}</h5>
+      {% endif %}
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="input_field"
+      />
+    </div>
+    <div>
+      <h4>Mật khẩu</h4>
+      <input
+        type="password"
+        id="password1"
+        name="password1"
+        required
+        class="input_field"
+      />
+    </div>
+    <div>
+      <h4>Xác nhận lại mật khẩu</h4>
+      {% if password_err %}
+      <h5>{{password_err}}</h5>
+      {% endif %}
+      <input
+        type="password"
+        id="password2"
+        name="password2"
+        required
+        class="input_field"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="login_button"
+    >
+      Đăng ký
+    </button>
+    <div class="icon_line">
+      <img
+        src="{% static 'img/facebook_color.png' %}"
+        alt=""
+      />
+      <img
+        src="{% static 'img/whatsapp_color.png' %}"
+        alt=""
+      />
+      <img
+        src="{% static 'img/telegram_color.png' %}"
+        alt=""
+      />
+    </div>
+  </form>
+  <img
+    class="form_img"
+    src="{% static 'img/register.png' %}"
+    alt=""
+  />
+</section>
+{% endblock %}

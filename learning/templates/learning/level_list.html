@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/learninglevel_banner.png')"
+>
+  <div class="banner_title">
+    <h1>HỌC TIẾNG NHẬT THEO CHỦ ĐỀ</h1>
+    <div class="chain_link">
+      <a href="/learning">Học tập </a>
+      /
+      <a href="">Học theo chủ đề</a>
+    </div>
+  </div>
+</div>
+<section class="note">
+  <div class="note_image"></div>
+  <div class="note_text">
+    <h1>Các bạn nhỏ hãy học và tham gia các trò chơi luyện tập theo thứ tự từ A1, A2, B1, B2, C1 nhé.</h1>
+  </div>
+</section>
+<section>
+  <div class="level_block">
+    <img
+      class="level_img"
+      src="{% static 'img/level_a1.png' %}"
+      alt=""
+    />
+    <div class="level_intro">
+      <h1>A1</h1>
+      <p>
+        Ở trình độ Nhập môn, các bạn sẽ được học các chủ đề đơn giản, gần gũi xung quanh chúng ta như chào hỏi, nói về
+        sở thích hay món ăn yêu thích của bản thân,...
+      </p>
+      <a
+        href="0"
+        class="button-dft"
+        >Học thôi</a
+      >
+      <a
+        href="/crossword/0/"
+        class="button-dft"
+        >Chơi nào</a
+      >
+    </div>
+  </div>
+  <div class="level_block">
+    <div class="level_intro">
+      <h1>A2</h1>
+      <p>
+        Trình độ này giúp các bạn học được các chủ đề nâng cao hơn trình độ A1 và từ đó, trải nghiệm nhiều khía cạnh đa
+        dạng của văn hóa Nhật Bản và đặc trưng trong đời sống của người Nhật.
+      </p>
+      <a
+        href="#"
+        class="button-dft"
+        >Học thôi</a
+      >
+      <a
+        href="#"
+        class="button-dft"
+        >Chơi nào</a
+      >
+    </div>
+    <img
+      class="level_img"
+      src="{% static 'img/level_a2.png' %}"
+      alt=""
+    />
+  </div>
+  <div class="level_block">
+    <img
+      class="level_img"
+      src="{% static 'img/level_b1.png' %}"
+      alt=""
+    />
+    <div class="level_intro">
+      <h1>B1</h1>
+      <p>
+        Cấp độ B1 thuộc mức độ Sơ – Trung cấp và trình độ B1 là trình độ nâng cao hơn sau khi bạn đã hoàn thành trình độ
+        Nhập môn A1 và Sơ cấp A2.
+      </p>
+      <a
+        href="#"
+        class="button-dft"
+        >Học thôi</a
+      >
+      <a
+        href="#"
+        class="button-dft"
+        >Chơi nào</a
+      >
+    </div>
+  </div>
+  <div class="level_block">
+    <div class="level_intro">
+      <h1>B2</h1>
+      <p>
+        Các bạn sẽ được học các chủ đề phức tạp hơn, như cung cấp thông tin về tin tức gần đây và nói về nghệ thuật,
+        lịch sử. Sau khóa học, các bé có thể đọc và hiểu nhiều loại văn bản, như bảng thông báo trên Internet và nội
+        dung trong tạp chí.
+      </p>
+      <a
+        href="#"
+        class="button-dft"
+        >Học thôi</a
+      >
+      <a
+        href="#"
+        class="button-dft"
+        >Chơi nào</a
+      >
+    </div>
+    <img
+      class="level_img"
+      src="{% static 'img/level_b2.png' %}"
+      alt=""
+    />
+  </div>
+</section>
+{% endblock %}

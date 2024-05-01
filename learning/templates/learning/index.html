@@ -1,0 +1,146 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/learning_banner.png')"
+>
+  <div class="banner_title">
+    <h1>HỌC TẬP</h1>
+    <div class="chain_link">
+      <a href="/">Trang chủ </a>
+      /
+      <a href="/learning">Học tập</a>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="slogan">
+    <div class="slogan_content">
+      <h1>
+        諦めないことだ。<br />
+        明亮と一緒に日本語を学びましょう。
+      </h1>
+      <h4 style="margin-top: 20px; color: #4d5053">AKIRA KUN</h4>
+    </div>
+  </div>
+</section>
+<section class="learning">
+  <div class="row">
+    <div
+      class="col_40"
+      style="justify-content: space-between"
+    >
+      <h1>HỌC BẢNG CHỮ CÁI</h1>
+      <p>
+        Chào các bé! Trước khi bắt đầu hành trình khám phá tiếng Nhật đầy thú vị với các bài học theo chủ đề, hãy cùng
+        Akira học bảng chữ cái nhé!
+      </p>
+      <a
+        href="alpha/"
+        class="button-dft"
+        >Học ngay</a
+      >
+    </div>
+    <div class="col_60">
+      <img
+        src="{% static 'img/learning_alpha.png' %}"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_60">
+      <img
+        src="{% static 'img/learning_title.png' %}"
+        alt=""
+      />
+    </div>
+    <div
+      class="col_40"
+      style="justify-content: space-between"
+    >
+      <h1>
+        HỌC TIẾNG NHẬT <br />
+        THEO CHỦ ĐỀ
+      </h1>
+      <p>
+        Hãy cùng Akira nhau khám phá tiếng Nhật đầy thú vị với các bài học và trò chơi luyện tập theo chủ đề thân thuộc
+        hàng ngày xung quanh bé nhé!
+      </p>
+      <a
+        href="level/"
+        class="button-dft"
+        >Học ngay</a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col_40"
+      style="justify-content: space-between"
+    >
+      <h1>XEM, ĐỌC, HÁT</h1>
+      <p>
+        Akira rất vui khi các bé đã sẵn sàng ôn tập tiếng Nhật thông qua các hoạt động giải trí thú vị! Akira đã chuẩn
+        bị cho các bé một số hoạt động ôn tập hấp dẫn. Hãy tham gia ngay nha!
+      </p>
+      <a
+        href="entertain/"
+        class="button-dft"
+        >Vào ngay</a
+      >
+    </div>
+    <div class="col_60">
+      <img
+        src="{% static 'img/learning_movie.png' %}"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_60">
+      <img
+        src="{% static 'img/learning_japan.jpg' %}"
+        alt=""
+      />
+    </div>
+    <div
+      class="col_40"
+      style="justify-content: space-between"
+    >
+      <h1>
+        DU LỊCH KHÁM PHÁ <br />
+        NHẬT BẢN
+      </h1>
+      <p>Cùng Akira du lịch Nhật Bản qua màn ảnh nhỏ nha!</p>
+      <a
+        href="discover/"
+        class="button-dft"
+        >Khám phá nào</a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col_40"
+      style="justify-content: space-between"
+    >
+      <h1>TRẢI NHIỆM CUỘC SỐNG</h1>
+      <p>
+        Akira rất vui khi được cùng các bé vừa ôn tập tiếng Nhật vừa khám phá thế giới xung quanh! Akira đã chuẩn bị cho
+        các bé một số hoạt động thú vị như hướng dẫn làm bánh, gấp giấy,... Thật thú vị đúng không nào, đừng bỏ lỡ nhé!
+      </p>
+      <a
+        href="experience/"
+        class="button-dft"
+        >Trải nghiệm thôi</a
+      >
+    </div>
+    <div class="col_60">
+      <img
+        src="{% static 'img/learning_experience.png' %}"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+{% endblock %}

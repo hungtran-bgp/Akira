@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="banner">
+  <button class="button-dft button-img">
+    <!-- <img src="{% static 'img/start_btn.png' %}" class="decor-img" alt="" /> -->
+    Bắt đầu
+    <img
+      src="{% static 'img/arrow-right-solid.svg' %}"
+      class="icon"
+      alt=""
+    />
+  </button>
+</section>
+
+<section class="intro">
+  <div class="intro_content">
+    <h1>Aikira –Wesite học tiếng Nhật <br />cho trẻ em Việt Nam.  </h1>
+    <p>
+      Website Akira tạo ra một môi trường học tập tiếng Nhật hữu ích và thú vị cho trẻ em Việt Nam. Các bạn nhỏ sẽ được
+      trải nghiệm vừa học, vừa chơi thông qua các hoạt động vô cùng hấp dẫn cùng với chú chó Akira.
+    </p>
+    <button class="button-dft">
+      Đọc thêm
+      <img
+        src="{% static 'img/arrow-right-solid.svg' %}"
+        class="icon"
+        alt=""
+      />
+    </button>
+  </div>
+  <div class="intro_image"></div>
+</section>
+<section class="learning">
+  <div class="title">Tại sao các bé nên học cùng Akira?</div>
+  <div class="learning_content">
+    <div class="learning_item">
+      <img
+        src="{%static 'img/learning1.png' %}"
+        alt=""
+      />
+      <p>Bài học gần gũi, thú vị</p>
+    </div>
+    <div class="learning_item">
+      <img
+        src="{%static 'img/learning2.png' %}"
+        alt=""
+      />
+      <p>Khám phá nước Nhật kì diệu</p>
+    </div>
+    <div class="learning_item">
+      <img
+        src="{%static 'img/learning3.png' %}"
+        alt=""
+      />
+      <p>Vừa học, vừa chơi các trò chơi bổ ích</p>
+    </div>
+    <div class="learning_item">
+      <img
+        src="{%static 'img/learning4.png' %}"
+        alt=""
+      />
+      <p>Học tập qua truyện tranh, hoạt hình</p>
+    </div>
+  </div>
+</section>
+<section class="comment">
+  <div class="title">Các bạn nhỏ nói gì khi học cùng Akira?</div>
+  <div class="comment_content">
+    <div class="comment_item">
+      <div class="infor">
+        <img
+          class="comment_img"
+          src="{% static 'img/comment1.jpg' %}"
+          alt=""
+        />
+        <h4>Lê Mỹ Linh</h4>
+      </div>
+      <p>
+        “Con thấy các bài học rất hấp dẫn, con thích chơi các trò chơi khi luyện tập, con cảm thấy không còn áp lực khi
+        học...”
+      </p>
+    </div>
+    <div class="comment_item">
+      <div class="infor">
+        <img
+          class="comment_img"
+          src="{% static 'img/comment1.jpg' %}"
+          alt=""
+        />
+        <h4>Lê Mỹ Linh</h4>
+      </div>
+      <p>
+        “Con thấy các bài học rất hấp dẫn, con thích chơi các trò chơi khi luyện tập, con cảm thấy không còn áp lực khi
+        học...”
+      </p>
+    </div>
+    <div class="comment_item">
+      <div class="infor">
+        <img
+          class="comment_img"
+          src="{% static 'img/comment1.jpg' %}"
+          alt=""
+        />
+        <h4>Lê Mỹ Linh</h4>
+      </div>
+      <p>
+        “Con thấy các bài học rất hấp dẫn, con thích chơi các trò chơi khi luyện tập, con cảm thấy không còn áp lực khi
+        học...”
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

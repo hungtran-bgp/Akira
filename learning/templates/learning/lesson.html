@@ -1,0 +1,16 @@
+{% extends 'base.html'%} {%load static%} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+{% endblock %} {%block content %}
+<section div="lesson_content">
+  {% for img_item in lesson_imgs %}
+  <img
+    src="{{img_item.image.url}}"
+    alt=""
+    class="lesson_img"
+  />
+  {% endfor %}
+</section>
+{% endblock%}

@@ -1,0 +1,62 @@
+{% extends 'user/user_base.html' %} {% load static %} {% block content %}
+<section class="login_register">
+  <form
+    method="post"
+    class="user_form"
+    action="{% url 'user:login' %}"
+  >
+    {% csrf_token %}
+    <h3>Chào mừng bạn đến với Akira Kids!</h3>
+    <div>
+      <h4>Tên đăng nhập</h4>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="input_field"
+        required
+        autofocus
+        autocomplete="off"
+      />
+    </div>
+    <div>
+      <h4>Mật khẩu</h4>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="input_field"
+        required
+        autocomplete="off"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="login_button"
+    >
+      Đăng nhập
+    </button>
+    <h4 style="text-align: center">Bạn chưa có tài khoản? <a href="/user/register">Hãy đăng ký ngay!</a></h4>
+    <div class="icon_line">
+      <img
+        src="{% static 'img/facebook_color.png' %}"
+        alt=""
+      />
+      <img
+        src="{% static 'img/whatsapp_color.png' %}"
+        alt=""
+      />
+      <img
+        src="{% static 'img/telegram_color.png' %}"
+        alt=""
+      />
+    </div>
+  </form>
+  <img
+    class="form_img"
+    src="{% static 'img/register.png' %}"
+    alt=""
+  />
+</section>
+{% endblock %}

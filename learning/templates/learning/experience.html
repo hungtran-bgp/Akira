@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'learning/learning_style.css' %}"
+/>
+<script>
+    function zoomImage(img) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+// Close the modal
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+  </script>
+{% endblock %} {% block content %}
+<div
+  class="base_banner"
+  style="background-image: url('/static/img/experience_banner.png')"
+>
+  <div class="banner_title" style="width: 700px;" >
+    <h1>TRẢI NGHIỆM CUỘC SỐNG</h1>
+    <div class="chain_link">
+      <a href="/learning">Học tập </a>
+      /
+      <a href="">Trải nghiệm cuộc sống</a>
+    </div>
+  </div>
+</div>
+<section class="experience">
+  <div class="experience_title">Cùng Akira tham gia vào các hoạt động thú vị để khám phá cuộc sống xunh quanh nhé!</div>
+  <div class="experience_block">
+    <img
+      src="{% static 'img/fold1.png' %}"
+      alt=""
+      class="experience_small_img "
+      onclick="zoomImage(this)"
+    />
+    <h4 id="check">Hướng dẫn gấp con cá</h4>
+  </div>
+  <div class="experience_block">
+    <img
+      src="{% static 'img/fold2.png' %}"
+      alt=""
+      class="experience_small_img "
+       onclick="zoomImage(this)"
+    />
+    <h4>Hướng dẫn gấp cái cano</h4>
+  </div>
+  <div class="experience_block">
+    <img
+      src="{% static 'img/fold3.png' %}"
+      alt=""
+      class="experience_small_img"
+      onclick="zoomImage(this)"
+    />
+    <h4>Hướng dẫn gấp con chó</h4>
+  </div>
+  <div class="experience_block">
+    <img
+      src="{% static 'img/fold4.png' %}"
+      alt=""
+      class="experience_small_img"
+      onclick="zoomImage(this)"
+    />
+    <h4>Hướng dẫn gấp con heo</h4>
+  </div>
+  <div class="experience_block">
+    <img
+      src="{% static 'img/cook1.png' %}"
+      alt=""
+      class="experience_big_img"
+      onclick="zoomImage(this)"
+    />
+    <h4>Hướng dẫn nấu món trứng chiên thanh cua</h4>
+  </div>
+  <div class="experience_block">
+    <div class="experience_block">
+        <img
+          src="{% static 'img/cook2.png' %}"
+          alt=""
+          class="experience_big_img"
+          onclick="zoomImage(this)"
+        />
+        <h4>Hướng dẫn nấu món gà teriyaki</h4>
+  </div>
+</section>
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>
+{% endblock %}

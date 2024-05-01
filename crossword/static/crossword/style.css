@@ -1,0 +1,122 @@
+.crossword_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.crossword_card {
+  background-color: #e7f3dd;
+  padding: 20px;
+  border-radius: 60px;
+  width: 350px;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+}
+.crossword_card:hover {
+  background-color: #b7dc99;
+}
+.crossword_img {
+  width: 320px;
+  height: 280px;
+  border-radius: 60px 60px 0 0;
+}
+.crossword_infor {
+  display: flex;
+}
+.crossword_card .button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cell {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  background-color: #e7f3dd;
+  border: none;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 10px 20px 0;
+  border-radius: 10px;
+}
+.correct_cell {
+  background-color: #b7dc99;
+}
+.err_cell {
+  background-color: rgba(255, 34, 34, 0.34);
+}
+.crossmap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.crossword_clue {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 500px;
+}
+.crossword_clue p {
+  font-size: 17px;
+}
+#crossword {
+  gap: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+tr {
+  height: 70px;
+}
+.note {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.note_image {
+  background-image: url("/static/img/note.png");
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 40px;
+}
+.note_text {
+  align-items: center;
+  flex: 1;
+  display: flex;
+  margin: 30px;
+  flex-direction: column;
+}
+#submit-btn {
+  margin-left: 150px;
+  margin-bottom: 150px;
+}
+.note p {
+  font-size: 24px;
+}
+.center {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+}
+
+#score {
+  display: flex;
+  width: 100%;
+  background-color: #b7dc99;
+  align-items: center;
+  font-size: 30px;
+  height: 100px;
+  padding-left: 35px;
+  border-radius: 50px;
+}
