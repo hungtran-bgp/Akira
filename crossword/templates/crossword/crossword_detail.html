@@ -55,9 +55,7 @@
     $("#submit-btn").click(function (event) {
       event.preventDefault(); // Prevent default form submission behavior
 
-      var words = getWords();
-      alert("Collected Words: " + JSON.stringify(words));
-      // Submit words using the form (no AJAX)
+      var words = getWords(); // Submit words using the form (no AJAX)
       var wordsJson = JSON.stringify(words);
       $("<input>")
         .attr("method", "POST")
@@ -91,7 +89,7 @@
   <div class="banner_title">
     <h1>{{crossmap.title}}</h1>
     <div class="chain_link">
-      <a href="/crossword/0">A1 </a>
+      <a href="{% url 'crossword:cross_list' 0 %}">A1 </a>
       /
       <a
         href=""

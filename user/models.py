@@ -5,7 +5,7 @@ from django.core.validators import MinValueValidator,MaxValueValidator
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete = models.CASCADE)
     fullname= models.CharField(max_length=100,default='hello world')
-    image = models.ImageField(upload_to='profile_pictures')
+    image = models.ImageField(upload_to='profile_pictures',default='default_avatar.png')
     location = models.CharField(max_length=100,blank=True)
     age = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(100)],default=10)
     GENDER_CHOICES = (

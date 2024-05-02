@@ -50,14 +50,17 @@
     </table>
   </div>
 </section>
-<div class="center">
+<div
+  class="center"
+  style="margin-bottom: 150px"
+>
   <a
-    href=""
+    href="{% url 'crossword:cross_list' 0 %}"
     class="button-dft"
     >Quay ra</a
   >
   <a
-    href=""
+    href="{% url 'crossword:crossword' 0 crossmap.id %}"
     class="button-dft"
     >Làm lại</a
   >

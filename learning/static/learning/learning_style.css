@@ -226,6 +226,7 @@
   width: 340px;
   height: 290px;
   border-radius: 60px;
+  margin-bottom: 30px;
 }
 .item_story:hover {
   background-color: #e7f3dd;

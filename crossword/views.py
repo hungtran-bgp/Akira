@@ -1,6 +1,6 @@
 # Create your views here.
-from django.shortcuts import render, get_object_or_404,HttpResponse
-from django.http import JsonResponse
+from django.shortcuts import render, get_object_or_404,redirect,HttpResponse
+from django.urls import reverse
 from .models import Crossmap, Word, CrossmapResult,WordResult
 from django.core.paginator import Paginator
 import json
@@ -31,12 +31,12 @@ def crossword_detail(request, level ,id):
         else:
             text_result=WordResult.objects.filter(crossmap_result=result)
             for i in range(len(text_result)):
-                text_result[i].text=wordlist
+                text_result[i].text=wordlist[i]
                 text_result[i].wordCheck=check[i]
                 text_result[i].save()
             result.score=score
             result.save()
-        return JsonResponse({'words':wordlist,'score':score})
+        return redirect(reverse('crossword:result', kwargs={'id': id}))
     # Prepare data for the template (grid, clues)
     else:
         return render(request, 'crossword/crossword_detail.html', {'crossmap': crossmap, 'words': words,'words_json':words_json})
@@ -63,13 +63,13 @@ def crossword_result(request,id):
     words_json = json.dumps(word_result_text)
     check_word= list(word_result.values_list('wordCheck',flat=True))
     check_json = json.dumps(check_word)
-    print(check_json)
     print(words_json)
     context={
         'title':crossmap.title,
         'score':crossmap_result.score,
         'words':words_json,
         'clue':words_clue,
-        'check':check_json
+        'check':check_json,
+        'crossmap':crossmap,
     }
     return render(request,'crossword/crossword_result.html',context)

@@ -1,20 +1,24 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 <section class="banner">
-  <button class="button-dft button-img">
+  <a
+    class="button-dft button-img"
+    href="{% url 'learning:index' %}"
+  >
     <!-- <img src="{% static 'img/start_btn.png' %}" class="decor-img" alt="" /> -->
     Bắt đầu
     <img
       src="{% static 'img/arrow-right-solid.svg' %}"
       class="icon"
       alt=""
+      style="margin-left: 3px"
     />
-  </button>
+  </a>
 </section>
 
 <section class="intro">
   <div class="intro_content">
-    <h1>Aikira –Wesite học tiếng Nhật <br />cho trẻ em Việt Nam.  </h1>
+    <h1>Akira –Wesite học tiếng Nhật <br />cho trẻ em Việt Nam.  </h1>
     <p>
       Website Akira tạo ra một môi trường học tập tiếng Nhật hữu ích và thú vị cho trẻ em Việt Nam. Các bạn nhỏ sẽ được
       trải nghiệm vừa học, vừa chơi thông qua các hoạt động vô cùng hấp dẫn cùng với chú chó Akira.
@@ -25,6 +29,7 @@
         src="{% static 'img/arrow-right-solid.svg' %}"
         class="icon"
         alt=""
+        style="margin-left: 3px"
       />
     </button>
   </div>
@@ -73,7 +78,7 @@
           src="{% static 'img/comment1.jpg' %}"
           alt=""
         />
-        <h4>Lê Mỹ Linh</h4>
+        <h4>Tráng Minh</h4>
       </div>
       <p>
         “Con thấy các bài học rất hấp dẫn, con thích chơi các trò chơi khi luyện tập, con cảm thấy không còn áp lực khi
@@ -84,7 +89,7 @@
       <div class="infor">
         <img
           class="comment_img"
-          src="{% static 'img/comment1.jpg' %}"
+          src="{% static 'img/comment3.png' %}"
           alt=""
         />
         <h4>Lê Mỹ Linh</h4>
@@ -98,10 +103,10 @@
       <div class="infor">
         <img
           class="comment_img"
-          src="{% static 'img/comment1.jpg' %}"
+          src="{% static 'img/comment2.png' %}"
           alt=""
         />
-        <h4>Lê Mỹ Linh</h4>
+        <h4>Thảo Hằng</h4>
       </div>
       <p>
         “Con thấy các bài học rất hấp dẫn, con thích chơi các trò chơi khi luyện tập, con cảm thấy không còn áp lực khi
