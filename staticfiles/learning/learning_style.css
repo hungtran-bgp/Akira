@@ -1,0 +1,240 @@
+.note {
+  display: flex;
+  justify-content: space-between;
+}
+.note_image {
+  background-image: url("/static/img/note.png");
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 40px;
+}
+.note_text {
+  align-items: center;
+  flex: 1;
+  display: flex;
+  margin: 30px;
+  flex-direction: column;
+}
+.level_block {
+  background-color: #e7f3dd;
+  display: flex;
+  padding: 50px 50px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.level_block h1 {
+  font-size: 120px;
+  font-weight: 400;
+}
+.level_intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.level_img {
+  width: 580px;
+  height: 640px;
+  border-radius: 0 150px 0 50%;
+  margin-right: 50px;
+}
+#main_block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 300px;
+}
+.lesson_item {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+}
+.lesson_item h3 {
+  font-size: 36px;
+}
+.lesson_number {
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  background-color: #e7f3dd;
+  width: 150px;
+  height: 90px;
+  padding-top: 15px;
+}
+.lesson_description {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  text-decoration: none;
+  color: black;
+}
+.lesson_description ul li {
+  font-size: 28px;
+}
+.lesson_section_title {
+  width: 100%;
+  height: 100px;
+  background-color: #b7dc99;
+  padding-left: 45px;
+  border-radius: 50px;
+  font-size: 36px;
+  padding-top: 20px;
+}
+.lesson_content {
+  display: flex;
+  flex-direction: column;
+}
+.lesson_img {
+  width: 1200px;
+  height: 2050px;
+}
+.alpha_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.alpha_block {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center;
+  padding: 20px;
+  height: 880px;
+  justify-content: space-around;
+}
+.alpha_block p {
+  padding: 40px;
+  text-align: justify;
+  line-height: 50px;
+}
+.alpha_title {
+  font-size: 48px;
+}
+.alpha_symbol {
+  text-align: center;
+  width: 360px;
+  font-size: 85px;
+  border-bottom: 1px solid black;
+}
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.experience_title {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.experience_block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.experience_small_img {
+  width: 500px;
+  height: 680px;
+  margin-bottom: 20px;
+}
+.experience_big_img {
+  width: 1195px;
+  height: 775px;
+  margin-bottom: 20px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 560px;
+  max-height: 80%;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 50px;
+  height: 50px;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.discover {
+  width: 100%;
+  background-color: #e7f3dd;
+  padding: 20px 150px;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 250px;
+}
+.video_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e7f3dd;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.video_white {
+  background-color: white;
+}
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+#story-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item_story {
+  width: 380px;
+  height: 500px;
+  border-radius: 60px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.item_story img {
+  width: 340px;
+  height: 290px;
+  border-radius: 60px;
+  margin-bottom: 30px;
+}
+.item_story:hover {
+  background-color: #e7f3dd;
+  cursor: pointer;
+}
+.mg-bt-200 {
+  margin-bottom: 200px;
+}
+.mg-bt-50 {
+  margin-bottom: 50px;
+}
